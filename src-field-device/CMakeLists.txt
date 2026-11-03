@@ -12,6 +12,8 @@ file(GLOB_RECURSE SOURCES
 )
 
 add_executable(field-device ${SOURCES} ${CMAKE_SOURCE_DIR}/startup_stm32c051xx.s)
+
+target_link_libraries(field-device PRIVATE init)
 target_link_libraries(field-device PRIVATE hal-driver)
 
 target_include_directories(field-device PUBLIC include)

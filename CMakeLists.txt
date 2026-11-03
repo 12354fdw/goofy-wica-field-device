@@ -19,6 +19,7 @@ message("Build type: " ${CMAKE_BUILD_TYPE})
 enable_language(C ASM)
 
 add_subdirectory(src-drivers)
+add_subdirectory(src-init)
 add_subdirectory(src-field-device)
 
 

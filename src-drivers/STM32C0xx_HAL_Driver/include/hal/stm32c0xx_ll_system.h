@@ -333,7 +333,7 @@ extern "C" {
   * @}
   */
 
-/** @defgroup SYSTEM_LL_PINMUX_SOURCE PINMUX Config src
+/** @defgroup SYSTEM_LL_PINMUX_SOURCE PINMUX Config Source
   * @{
   */
 #if (DEV_ID == 0x443UL)
@@ -455,7 +455,7 @@ __STATIC_INLINE void LL_SYSCFG_DisablePinRemap(uint32_t PinRemap)
 /**
   * @brief  Set IR Modulation Envelope signal source.
   * @rmtoll SYSCFG_CFGR1 IR_MOD  LL_SYSCFG_SetIRModEnvelopeSignal
-  * @param  src This parameter can be one of the following values:
+  * @param  Source This parameter can be one of the following values:
   *         @arg @ref LL_SYSCFG_IR_MOD_TIM16
   *         @arg @ref LL_SYSCFG_IR_MOD_USART1
   *         @arg @ref LL_SYSCFG_IR_MOD_USART2

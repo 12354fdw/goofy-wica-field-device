@@ -247,7 +247,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCC_HCLK_Clock_Source  RCC HCLK Clock src
+/** @defgroup RCC_HCLK_Clock_Source  RCC HCLK Clock Source
   * @{
   */
 #define LL_RCC_HCLK_DIV_1                  0x00000000U                                                             /*!< HCLK not divided */
@@ -1090,7 +1090,7 @@ __STATIC_INLINE void LL_RCC_LSCO_Disable(void)
 /**
   * @brief  Configure Low speed clock selection
   * @rmtoll CSR1         LSCOSEL       LL_RCC_LSCO_SetSource
-  * @param  src This parameter can be one of the following values:
+  * @param  Source This parameter can be one of the following values:
   *         @arg @ref LL_RCC_LSCO_CLKSOURCE_LSI
   *         @arg @ref LL_RCC_LSCO_CLKSOURCE_LSE
   * @retval None
@@ -1123,7 +1123,7 @@ __STATIC_INLINE uint32_t LL_RCC_LSCO_GetSource(void)
 /**
   * @brief  Configure the system clock source
   * @rmtoll CFGR         SW            LL_RCC_SetSysClkSource
-  * @param  src This parameter can be one of the following values:
+  * @param  Source This parameter can be one of the following values:
   *         @arg @ref LL_RCC_SYS_CLKSOURCE_HSI
   *         @arg @ref LL_RCC_SYS_CLKSOURCE_HSE
   *         @arg @ref LL_RCC_SYS_CLKSOURCE_HSIUSB48 (*)
@@ -1409,7 +1409,7 @@ __STATIC_INLINE void LL_RCC_ConfigMCO2(uint32_t MCOxSource, uint32_t MCOxPrescal
 /**
   * @}
   */
-/** @defgroup RCC_LL_EF_Peripheral_Clock_Source Peripheral Clock src
+/** @defgroup RCC_LL_EF_Peripheral_Clock_Source Peripheral Clock Source
   * @{
   */
 
@@ -1602,12 +1602,12 @@ __STATIC_INLINE uint32_t LL_RCC_GetFDCANClockSource(uint32_t FDCANx)
   */
 
 /**
-  * @brief  Set RTC Clock src
+  * @brief  Set RTC Clock Source
   * @note Once the RTC clock source has been selected, it cannot be changed anymore unless
   *       the Backup domain is reset, or unless a failure is detected on LSE (LSECSSD is
   *       set). The BDRST bit can be used to reset them.
   * @rmtoll CSR1         RTCSEL        LL_RCC_SetRTCClockSource
-  * @param  src This parameter can be one of the following values:
+  * @param  Source This parameter can be one of the following values:
   *         @arg @ref LL_RCC_RTC_CLKSOURCE_NONE
   *         @arg @ref LL_RCC_RTC_CLKSOURCE_LSE
   *         @arg @ref LL_RCC_RTC_CLKSOURCE_LSI
@@ -1620,7 +1620,7 @@ __STATIC_INLINE void LL_RCC_SetRTCClockSource(uint32_t Source)
 }
 
 /**
-  * @brief  Get RTC Clock src
+  * @brief  Get RTC Clock Source
   * @rmtoll CSR1         RTCSEL        LL_RCC_GetRTCClockSource
   * @retval Returned value can be one of the following values:
   *         @arg @ref LL_RCC_RTC_CLKSOURCE_NONE

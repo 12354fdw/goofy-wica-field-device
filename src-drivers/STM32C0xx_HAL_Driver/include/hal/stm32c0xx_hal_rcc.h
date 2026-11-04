@@ -399,7 +399,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCC_System_Clock_Source System Clock src
+/** @defgroup RCC_System_Clock_Source System Clock Source
   * @{
   */
 #define RCC_SYSCLKSOURCE_HSI           0x00000000U                       /*!< HSI selection as system clock */
@@ -413,7 +413,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCC_System_Clock_Source_Status System Clock src Status
+/** @defgroup RCC_System_Clock_Source_Status System Clock Source Status
   * @{
   */
 #define RCC_SYSCLKSOURCE_STATUS_HSI           0x00000000U                       /*!< HSI used as system clock */
@@ -474,7 +474,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCC_RTC_Clock_Source RTC Clock src
+/** @defgroup RCC_RTC_Clock_Source RTC Clock Source
   * @{
   */
 #define RCC_RTCCLKSOURCE_NONE          0x00000000U         /*!< No clock configured for RTC */
@@ -542,7 +542,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCC_MCO1_Clock_Source MCO1 Clock src
+/** @defgroup RCC_MCO1_Clock_Source MCO1 Clock Source
   * @{
   */
 #define RCC_MCO1SOURCE_NOCLOCK         0x00000000U                            /*!< MCO1 output disabled, no clock on MCO1 */
@@ -558,7 +558,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCC_MCO2_Clock_Source MCO2 Clock src
+/** @defgroup RCC_MCO2_Clock_Source MCO2 Clock Source
   * @{
   */
 #define RCC_MCO2SOURCE_NOCLOCK         0x00000000U                              /*!< MCO2 output disabled, no clock on MCO2 */

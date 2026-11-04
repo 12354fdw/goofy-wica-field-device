@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
+#include "panic.h"
 #include "stm32c0xx_hal.h"
-#include "init/panic.h"
 
 #define BAUD_RATE 115200
 

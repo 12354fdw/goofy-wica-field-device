@@ -643,7 +643,7 @@ void HAL_RCCEx_CRSConfig(RCC_CRSInitTypeDef *pInit)
   __HAL_RCC_CRS_RELEASE_RESET();
 
   /* Set the SYNCDIV[2:0] bits according to Prescaler value */
-  /* Set the SYNCSRC[1:0] bits according to src value */
+  /* Set the SYNCSRC[1:0] bits according to Source value */
   /* Set the SYNCSPOL bit according to Polarity value */
   value = (pInit->Prescaler | pInit->Source | pInit->Polarity);
   /* Set the RELOAD[15:0] bits according to ReloadValue value */

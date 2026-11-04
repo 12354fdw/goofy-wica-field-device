@@ -26,7 +26,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32c0xx.h"
-#include "../stm32c0xx_ll_dmamux.h"
+#include "stm32c0xx_ll_dmamux.h"
 
 /** @addtogroup STM32C0xx_LL_Driver
   * @{
@@ -83,7 +83,7 @@ static const uint8_t CHANNEL_OFFSET_TAB[] =
 typedef struct
 {
   uint32_t PeriphOrM2MSrcAddress;  /*!< Specifies the peripheral base address for DMA transfer
-                                        or as src base address in case of memory to memory transfer direction.
+                                        or as Source base address in case of memory to memory transfer direction.
 
                                         This parameter must be a value between Min_Data = 0 and Max_Data = 0xFFFFFFFF */
 
@@ -107,7 +107,7 @@ typedef struct
                                         This feature can be modified afterwards using unitary function
                                         @ref LL_DMA_SetMode(). */
 
-  uint32_t PeriphOrM2MSrcIncMode;  /*!< Specifies whether the Peripheral address or src address in case of memory to
+  uint32_t PeriphOrM2MSrcIncMode;  /*!< Specifies whether the Peripheral address or Source address in case of memory to
                                         memory transfer directionis incremented or not.
                                         This parameter can be a value of @ref DMA_LL_EC_PERIPH
 
@@ -121,7 +121,7 @@ typedef struct
                                         This feature can be modified afterwards using unitary function
                                         @ref LL_DMA_SetMemoryIncMode(). */
 
-  uint32_t PeriphOrM2MSrcDataSize; /*!< Specifies the Peripheral data size alignment or src data size alignment
+  uint32_t PeriphOrM2MSrcDataSize; /*!< Specifies the Peripheral data size alignment or Source data size alignment
                                         (byte, half word, word)in case of memory to memory transfer direction.
                                         This parameter can be a value of @ref DMA_LL_EC_PDATAALIGN
 
@@ -997,7 +997,7 @@ __STATIC_INLINE uint32_t LL_DMA_GetDataLength(const DMA_TypeDef *DMAx, uint32_t 
 }
 
 /**
-  * @brief  Configure the src and Destination addresses.
+  * @brief  Configure the Source and Destination addresses.
   * @note   This API must not be called when the DMA channel is enabled.
   * @note   Each peripheral using DMA provides an API to get directly the register address (LL_PPP_DMA_GetRegAddr).
   * @rmtoll CPAR         PA            LL_DMA_ConfigAddresses\n
@@ -1131,7 +1131,7 @@ __STATIC_INLINE uint32_t LL_DMA_GetPeriphAddress(const DMA_TypeDef *DMAx, uint32
 }
 
 /**
-  * @brief  Set the Memory to Memory src address.
+  * @brief  Set the Memory to Memory Source address.
   * @note   Interface used for direction LL_DMA_DIRECTION_MEMORY_TO_MEMORY only.
   * @note   This API must not be called when the DMA channel is enabled.
   * @rmtoll CPAR         PA            LL_DMA_SetM2MSrcAddress
@@ -1179,7 +1179,7 @@ __STATIC_INLINE void LL_DMA_SetM2MDstAddress(const DMA_TypeDef *DMAx, uint32_t C
 }
 
 /**
-  * @brief  Get the Memory to Memory src address.
+  * @brief  Get the Memory to Memory Source address.
   * @note   Interface used for direction LL_DMA_DIRECTION_MEMORY_TO_MEMORY only.
   * @rmtoll CPAR         PA            LL_DMA_GetM2MSrcAddress
   * @param  DMAx DMAx Instance

@@ -150,7 +150,7 @@ typedef enum
   * @}
   */
 
-/** @defgroup HAL_BIND_SCOURCE  Bind Pin src
+/** @defgroup HAL_BIND_SCOURCE  Bind Pin Source
   * @{
   */
 #if (DEV_ID == 0x443UL)

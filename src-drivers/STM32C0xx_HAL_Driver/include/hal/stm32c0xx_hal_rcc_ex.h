@@ -141,7 +141,7 @@ typedef struct
   * @{
   */
 
-/** @defgroup RCCEx_LSCO_Clock_Source Low Speed Clock src
+/** @defgroup RCCEx_LSCO_Clock_Source Low Speed Clock Source
   * @{
   */
 #define RCC_LSCOSOURCE_LSI             0x00000000U           /*!< LSI selection for low speed clock output */
@@ -171,7 +171,7 @@ typedef struct
   */
 
 
-/** @defgroup RCCEx_USART1_Clock_Source RCC USART1 Clock src
+/** @defgroup RCCEx_USART1_Clock_Source RCC USART1 Clock Source
   * @{
   */
 #define RCC_USART1CLKSOURCE_PCLK1      0x00000000U                                      /*!< APB clock selected as USART 1 clock */
@@ -183,7 +183,7 @@ typedef struct
   */
 
 
-/** @defgroup RCCEx_I2C1_Clock_Source RCC I2C1 Clock src
+/** @defgroup RCCEx_I2C1_Clock_Source RCC I2C1 Clock Source
   * @{
   */
 #define RCC_I2C1CLKSOURCE_PCLK1        0x00000000U                /*!< APB clock selected as I2C1 clock */
@@ -193,7 +193,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup RCCEx_I2S1_Clock_Source RCC I2S1 Clock src
+/** @defgroup RCCEx_I2S1_Clock_Source RCC I2S1 Clock Source
   * @{
   */
 #define RCC_I2S1CLKSOURCE_SYSCLK       0x00000000U              /*!< SYSCLK clock selected as I2S1 clock */
@@ -204,7 +204,7 @@ typedef struct
   * @}
   */
 #if defined(USB_DRD_FS)
-/** @defgroup RCCEx_USB_Clock_Source USB Clock src
+/** @defgroup RCCEx_USB_Clock_Source USB Clock Source
   * @{
   */
 #define RCC_USBCLKSOURCE_HSI48         0x00000000U
@@ -215,7 +215,7 @@ typedef struct
 #endif /* USB_DRD_FS */
 
 #if defined(FDCAN1)
-/** @defgroup RCCEx_FDCAN1_Clock_Source FDCAN1 Clock src
+/** @defgroup RCCEx_FDCAN1_Clock_Source FDCAN1 Clock Source
   * @{
   */
 #define RCC_FDCAN1CLKSOURCE_PCLK1         0x00000000U
@@ -226,7 +226,7 @@ typedef struct
   */
 #endif /* FDCAN1 */
 
-/** @defgroup RCCEx_ADC_Clock_Source RCC ADC Clock src
+/** @defgroup RCCEx_ADC_Clock_Source RCC ADC Clock Source
   * @{
   */
 

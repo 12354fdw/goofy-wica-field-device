@@ -19,7 +19,7 @@ int main(void) {
     HAL_UART_Transmit(&logUart, "hi", 3, HAL_MAX_DELAY);
 
     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
-    HAL_Delay(100);
+    HAL_Delay(500);
   }
 }
 

@@ -3,7 +3,7 @@
 #include "stm32c0xx_hal.h"
 #include "private/configure_clock.h"
 #include "private/configure_pins.h"
-#include "private/configure_uart.h"
+#include "../include/init/configure_uart.h"
 
 void INIT_InitSystem(void) {
     HAL_Init();

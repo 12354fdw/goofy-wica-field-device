@@ -14,7 +14,7 @@ int main(void) {
     HAL_Delay(1000);
 
     printf("Hello, World!\n");
-    fflush(stdout);
+    PANIC("not finished!");
 
 
     for (;;) {

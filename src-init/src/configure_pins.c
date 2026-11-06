@@ -1,7 +1,6 @@
 #include "private/configure_pins.h"
 
-#include "stm32c0xx_hal_gpio.h"
-#include "stm32c0xx_hal_rcc.h"
+#include "stm32c0xx_hal.h"
 
 #define PIN_I2C_BUS_PWR  GPIO_PIN_0   // PA0
 #define PIN_RF_DIO1      GPIO_PIN_1   // PA1

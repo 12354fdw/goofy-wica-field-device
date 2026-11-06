@@ -4,7 +4,7 @@
 
 #ifndef CONFIGURE_UART_H
 #define CONFIGURE_UART_H
-#include "stm32c0xx_hal_uart.h"
+#include "stm32c0xx_hal.h"
 
 void INIT_ConfigureUartOrDie(void);
 

@@ -5,7 +5,6 @@
 
 #include "panic.h"
 #include "stm32c0xx_hal.h"
-#include "stm32c0xx_hal_uart.h"
 
 #define BAUD_RATE 115200
 
@@ -33,10 +32,8 @@ void INIT_ConfigureUartOrDie(void) {
 int __io_putchar(int ch) {
     uint8_t byte = (uint8_t)ch;
 
-    HAL_StatusTypeDef status = HAL_OK;
-    // do {
-        status = HAL_UART_Transmit(&logUart, &byte, 1, HAL_MAX_DELAY);
-    // } while (status != HAL_OK);
+    HAL_StatusTypeDef status = HAL_UART_Transmit(&logUart, &byte, 1, HAL_MAX_DELAY);
+    (void)status;
 
     return 0;
 }

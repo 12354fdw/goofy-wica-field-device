@@ -15,4 +15,6 @@ add_library(stm32c0xx INTERFACE)
 
 target_link_libraries(stm32c0xx INTERFACE cmsis)
 
+target_compile_definitions(stm32c0xx INTERFACE USE_HAL_DRIVER STM32C051xx)
+
 target_include_directories(stm32c0xx INTERFACE include)

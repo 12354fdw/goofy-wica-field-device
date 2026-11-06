@@ -1,8 +1,7 @@
 #include "private/configure_clock.h"
 
 #include "panic.h"
-#include "stm32c0xx_hal_flash.h"
-#include "stm32c0xx_hal_rcc.h"
+#include "stm32c0xx_hal.h"
 
 void INIT_ConfigureClockOrDie(void) {
     RCC_OscInitTypeDef RCC_OscInitStruct = {0};

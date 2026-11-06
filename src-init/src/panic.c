@@ -1,9 +1,12 @@
 #include "panic.h"
 
+#include <stdio.h>
+
 #include "stm32c0xx_hal.h"
-#include "stm32c0xx/stm32c051xx.h"
 
 void EarlyPanic(void) {
+    __disable_irq();
+
     // enable PA
     RCC->IOPENR |= RCC_IOPENR_GPIOAEN;
     __DSB();
@@ -21,8 +24,10 @@ void EarlyPanic(void) {
     }
 }
 
-// TODO: make it print to UART
 void PANIC(char* reason) {
+    printf("PANIC!Reason=%s", reason);
+
+    __disable_irq();
     for (;;) {
         HAL_Delay(100);
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);

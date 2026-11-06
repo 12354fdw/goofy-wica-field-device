@@ -62,7 +62,7 @@ extern "C" {
   * @{
   */
 
-/** @defgroup CORTEX_LL_EC_CLKSOURCE_HCLK SYSTICK Clock src
+/** @defgroup CORTEX_LL_EC_CLKSOURCE_HCLK SYSTICK Clock Source
   * @{
   */
 #define LL_SYSTICK_CLKSOURCE_HCLK_DIV8     0x00000000U                 /*!< AHB clock divided by 8 selected
@@ -226,7 +226,7 @@ __STATIC_INLINE uint32_t LL_SYSTICK_IsActiveCounterFlag(void)
 /**
   * @brief  Configures the SysTick clock source
   * @rmtoll STK_CTRL     CLKSOURCE     LL_SYSTICK_SetClkSource
-  * @param  src This parameter can be one of the following values:
+  * @param  Source This parameter can be one of the following values:
   *         @arg @ref LL_SYSTICK_CLKSOURCE_HCLK_DIV8
   *         @arg @ref LL_SYSTICK_CLKSOURCE_HCLK
   * @retval None

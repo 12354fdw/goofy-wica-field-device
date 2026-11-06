@@ -12,7 +12,7 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
 )
 
 add_library(init STATIC ${SOURCES})
-target_link_libraries(init PRIVATE hal-driver)
+target_link_libraries(init PUBLIC hal-driver)
 
 target_include_directories(init PUBLIC include)
 target_include_directories(init PRIVATE include/init)

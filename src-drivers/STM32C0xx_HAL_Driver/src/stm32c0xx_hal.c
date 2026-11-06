@@ -108,7 +108,7 @@ HAL_TickFreqTypeDef uwTickFreq = HAL_TICK_FREQ_DEFAULT;  /* 1KHz */
         (++) Time base configuration function (HAL_InitTick ()) is called automatically
              at the beginning of the program after reset by HAL_Init() or at any time
              when clock is configured, by HAL_RCC_ClockConfig().
-        (++) src of time base is configured  to generate interrupts at regular
+        (++) Source of time base is configured  to generate interrupts at regular
              time intervals. Care must be taken if HAL_Delay() is called from a
              peripheral ISR process, the Tick interrupt line must have higher priority
             (numerically lower) than the peripheral interrupt. Otherwise the caller

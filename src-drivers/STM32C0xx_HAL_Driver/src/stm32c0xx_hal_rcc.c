@@ -701,7 +701,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
     MODIFY_REG(RCC->CR, RCC_CR_SYSDIV, RCC_ClkInitStruct->SYSCLKDivider);
 #endif /* RCC_CR_SYSDIV */
 
-    /* HSE is selected as System Clock src */
+    /* HSE is selected as System Clock Source */
     if (RCC_ClkInitStruct->SYSCLKSource == RCC_SYSCLKSOURCE_HSE)
     {
       /* Check the HSE ready flag */
@@ -710,7 +710,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
         return HAL_ERROR;
       }
     }
-    /* HSI is selected as System Clock src */
+    /* HSI is selected as System Clock Source */
     else if (RCC_ClkInitStruct->SYSCLKSource == RCC_SYSCLKSOURCE_HSI)
     {
       /* Check the HSI ready flag */
@@ -720,7 +720,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
       }
     }
 #if defined(RCC_HSI48_SUPPORT)
-    /* HSIUSB48 is selected as System Clock src */
+    /* HSIUSB48 is selected as System Clock Source */
     else if (RCC_ClkInitStruct->SYSCLKSource == RCC_SYSCLKSOURCE_HSIUSB48)
     {
       /* Check the HSIUSB48 ready flag */
@@ -730,7 +730,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
       }
     }
 #endif /* RCC_HSI48_SUPPORT */
-    /* LSI is selected as System Clock src */
+    /* LSI is selected as System Clock Source */
     else if (RCC_ClkInitStruct->SYSCLKSource == RCC_SYSCLKSOURCE_LSI)
     {
       /* Check the LSI ready flag */
@@ -739,7 +739,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
         return HAL_ERROR;
       }
     }
-    /* LSE is selected as System Clock src */
+    /* LSE is selected as System Clock Source */
     else
     {
       /* Check the LSE ready flag */

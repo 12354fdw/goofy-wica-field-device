@@ -99,7 +99,9 @@
   * @{
   */
 
+#if !defined(STM32C051xx)
 #define STM32C051xx
+#endif
 
 #if defined(STM32C011xx)
   #include "stm32c011xx.h"

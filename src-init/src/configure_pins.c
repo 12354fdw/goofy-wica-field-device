@@ -1,7 +1,6 @@
 #include "private/configure_pins.h"
 
-#include "stm32c0xx_hal_gpio.h"
-#include "stm32c0xx_hal_rcc.h"
+#include "stm32c0xx_hal.h"
 
 #define PIN_I2C_BUS_PWR  GPIO_PIN_0   // PA0
 #define PIN_RF_DIO1      GPIO_PIN_1   // PA1
@@ -25,7 +24,7 @@ void INIT_ConfigurePins(void) {
     __HAL_RCC_SYSCFG_CLK_ENABLE();
 
     // port remap
-    SET_BIT(SYSCFG->CFGR1, SYSCFG_CFGR1_PA11_RMP | SYSCFG_CFGR1_PA12_RMP);
+    SYSCFG->CFGR1 |= SYSCFG_CFGR1_PA11_RMP | SYSCFG_CFGR1_PA12_RMP;
 
     HAL_GPIO_WritePin(GPIOA, PIN_I2C_BUS_PWR | PIN_RF_NRST | PIN_RF_NSS
                              | PIN_STATUS_LED, GPIO_PIN_RESET);
@@ -76,7 +75,7 @@ void INIT_ConfigurePins(void) {
     GPIO_InitStruct.Pin = PIN_LOG_TX | PIN_LOG_RX;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF1_USART1;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }

@@ -30,8 +30,8 @@
        and DMA requests.
 
    (#) For a given Channel, program the required configuration through the following parameters:
-       Channel request, Transfer Direction, src and Destination data formats,
-       Circular or Normal mode, Channel Priority level, src and Destination Increment mode
+       Channel request, Transfer Direction, Source and Destination data formats,
+       Circular or Normal mode, Channel Priority level, Source and Destination Increment mode
        using HAL_DMA_Init() function.
 
        Prior to HAL_DMA_Init the CLK shall be enabled for both DMA & DMAMUX
@@ -47,7 +47,7 @@
      *** Polling mode IO operation ***
      =================================
     [..]
-          (+) Use HAL_DMA_Start() to start DMA transfer after the configuration of src
+          (+) Use HAL_DMA_Start() to start DMA transfer after the configuration of Source
               address and destination address and the Length of data to be transferred
           (+) Use HAL_DMA_PollForTransfer() to poll for the end of current transfer, in this
               case a fixed Timeout can be configured by User depending from his application.
@@ -58,7 +58,7 @@
           (+) Configure the DMA interrupt priority using HAL_NVIC_SetPriority()
           (+) Enable the DMA IRQ handler using HAL_NVIC_EnableIRQ()
           (+) Use HAL_DMA_Start_IT() to start DMA transfer after the configuration of
-              src address and destination address and the Length of data to be transferred.
+              Source address and destination address and the Length of data to be transferred.
               In this case the DMA interrupt is configured
           (+) Use HAL_DMA_IRQHandler() called under DMA_IRQHandler() Interrupt subroutine
           (+) At the end of data transfer HAL_DMA_IRQHandler() function is executed and user can

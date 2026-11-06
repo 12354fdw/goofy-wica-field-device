@@ -4,23 +4,25 @@
 
 #include "init/configure_uart.h"
 #include "init/init.h"
+#include "init/panic.h"
 
 int main(void) {
-  INIT_InitSystem();
+    INIT_InitSystem();
 
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
 
-  HAL_Delay(1000);
+    HAL_Delay(1000);
 
-  for (;;) {
-    // printf("Hello, World!\n");
-    // fflush(stdout);
+    printf("Hello, World!\n");
+    fflush(stdout);
 
-    HAL_UART_Transmit(&logUart, "hi", 3, HAL_MAX_DELAY);
 
-    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
-    HAL_Delay(500);
-  }
+    for (;;) {
+        // if (HAL_UART_Transmit(&logUart, "hi", 3, HAL_MAX_DELAY) != HAL_OK) EarlyPanic();
+
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
+        HAL_Delay(500);
+    }
 }
 
 #ifdef USE_FULL_ASSERT

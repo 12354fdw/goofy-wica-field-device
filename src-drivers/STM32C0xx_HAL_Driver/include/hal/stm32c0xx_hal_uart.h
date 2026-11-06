@@ -172,7 +172,7 @@ typedef struct
   *          b0     (not used)
   *             x  : Should be set to 0.
   */
-typedef uint32_t HAL_UART_StateTypeDef;
+typedef uint32_t HAL_UART_StateTypeDef; 
 
 /**
   * @brief UART clock sources definition
